@@ -27,10 +27,9 @@ $this->setFrameMode(true);
 //        echo '</pre>';
 //        die;
 //    ?>
-    <?php
-        if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arItem["PREVIEW_TEXT"]):?>
-            <b> <?php echo $arItem["NAME"];?> </b>
-    <?php endif;?>
+    <?php if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
+            <a href="<?echo $arItem["DETAIL_PAGE_URL"]?>"><b><?echo $arItem["NAME"]?></b></a><br/>
+        <?endif;?>
     <div class="one_news">
         <img
             class="preview_picture"
