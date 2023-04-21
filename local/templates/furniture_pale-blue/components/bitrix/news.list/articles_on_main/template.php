@@ -59,7 +59,7 @@ $this->setFrameMode(true);
     <?php endforeach; ?>
 </div>
 <style>
-    .one_news{display: flex; /*align-items: center;*/ margin-top: 10px; margin-bottom: 10px; /*height: 202px*/}
+    .one_news{display: flex; align-items: center; margin-top: 10px; margin-bottom: 10px;}
     .one_news .news_img{/*flex-direction: row;*/}
-    .one_news .news_container{/*flex-direction: row; margin-left: 15px*/}
+    .one_news .news_container{/*flex-direction: row;*/ margin-left: 15px}
 </style>
