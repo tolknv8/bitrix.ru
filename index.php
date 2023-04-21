@@ -60,7 +60,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
         //    "PROPERTY_CODE" => Array("DESCRIPTION"),
         //    "ACTIVE_DATE_FORMAT" => "d.m.Y",
         //    "DETAIL_URL" => "https://600-bitrix.bf360.ru/articles/",
-        //    "FIELD_CODE" => Array("CREATED_USER_NAME"),
+        "FIELD_CODE" => Array("CREATED_USER_NAME"),
         "SET_TITLE"                       => "N",
         "SET_BROWSER_TITLE"               => "N",
         "SET_META_KEYWORDS"               => "Y",
