@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 
     <?php foreach ($arResult['ITEMS'] as $arItem):
         if(!$arParams['HIDE_LINK_WHEN_NO_DETAIL'] || ($arItem['DETAIL_TEXT'] && $arResult['USER_HAVE_ACCESS'])):?>
-            <a href="<?echo $arItem['DETAIL_PAGE_URL']?>"><b><?echo $arItem['NAME']?></b></a><br/>
+            <a href="<?= $arItem['DETAIL_PAGE_URL']?>"><b><?= $arItem['NAME']?></b></a><br/>
         <?endif;?>
     <div class="one_news">
         <img
@@ -31,18 +31,14 @@ $this->setFrameMode(true);
             class="news_img"
         />
         <div class="news_container">
-            <?echo $arItem['PREVIEW_TEXT']?>
+            <?= $arItem['PREVIEW_TEXT']?>
             <p>
                 <?php
-                    $name = explode(" ",$arItem['CREATED_USER_NAME'], 2);
+                    $name = explode(' ',$arItem['CREATED_USER_NAME'], 2);
                     echo $name[1];
                 ?>
             </p>
         </div>
-        <?if(!$arParams['HIDE_LINK_WHEN_NO_DETAIL'] || ($arItem['DETAIL_TEXT'] && $arResult['USER_HAVE_ACCESS'])):?>
-            <a href="<?echo $arItem['DETAIL_PAGE_URL']?>" style="visibility: hidden"><b><?echo $arItem['NAME']?></b></a><br />
-        <?endif;?>
-
     </div>
 
     <?endforeach; ?>
