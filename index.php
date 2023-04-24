@@ -18,6 +18,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
         индивидуальный подход – с другой.
     </p>
     <h3>Наша продукция</h3>
+
 <?php require('local/articlesList.php') ?>
 
 <? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
