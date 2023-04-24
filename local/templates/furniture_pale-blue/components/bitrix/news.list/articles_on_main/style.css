@@ -10,3 +10,12 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.one_news{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.one_news .news_container{
+	margin-left: 15px
+}
