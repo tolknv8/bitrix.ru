@@ -1,4 +1,4 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 /** @var array $arParams */
@@ -16,30 +16,26 @@ $this->setFrameMode(true);
 ?>
 <div class="news-list">
 
-    <?php foreach ($arResult['ITEMS'] as $arItem):
-        if(!$arParams['HIDE_LINK_WHEN_NO_DETAIL'] || ($arItem['DETAIL_TEXT'] && $arResult['USER_HAVE_ACCESS'])):?>
-            <a href="<?= $arItem['DETAIL_PAGE_URL']?>"><b><?= $arItem['NAME']?></b></a><br/>
-        <?endif;?>
-    <div class="one_news">
-        <img
-            class="preview_picture"
-            src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"
-            width="<?=$arItem['PREVIEW_PICTURE']['WIDTH']?>"
-            height="<?=$arItem['PREVIEW_PICTURE']['HEIGHT']?>"
-            alt="<?=$arItem['PREVIEW_PICTURE']['ALT']?>"
-            title="<?=$arItem['PREVIEW_PICTURE']['TITLE']?>"
-            class="news_img"
-        />
-        <div class="news_container">
-            <?= $arItem['PREVIEW_TEXT']?>
-            <p>
-                <?php
-                    $name = explode(' ',$arItem['CREATED_USER_NAME'], 2);
-                    echo $name[1];
-                ?>
-            </p>
+    <?php foreach ($arResult['ITEMS'] as $arItem): ?>
+        <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"><b><?= $arItem['NAME'] ?></b></a><br/>
+        <div class="one_news">
+            <?php if ($arItem['PREVIEW_PICTURE']): ?>
+                <img
+                    class="preview_picture"
+                    src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>"
+                    width="<?= $arItem['PREVIEW_PICTURE']['WIDTH'] ?>"
+                    height="<?= $arItem['PREVIEW_PICTURE']['HEIGHT'] ?>"
+                    alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>"
+                    title="<?= $arItem['PREVIEW_PICTURE']['TITLE'] ?>"
+                    class="news_img"
+                />
+            <?php endif ?>
+            <div class="news_container">
+                <?= $arItem['PREVIEW_TEXT'] ?>
+                <?php if ($arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE']):
+                    echo $arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE'];
+                endif; ?>
+            </div>
         </div>
-    </div>
-
-    <?endforeach; ?>
+    <?php endforeach; ?>
 </div>
