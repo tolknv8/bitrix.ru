@@ -1,4 +1,6 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+    die();
+}
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -10,4 +12,11 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true);
+$this->setFrameMode(true); ?>
+<div>
+    <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
+        <div style="background-image: url("")">
+            <a href="<?= $arItem['LIST_PAGE_URL'] ?>"><?= $arItem['NAME']?></a>
+        </div>
+    <?php endforeach; ?>
+</div>
