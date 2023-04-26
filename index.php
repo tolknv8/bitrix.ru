@@ -1,29 +1,41 @@
+<link rel="stylesheet" href="/local/templates/furniture_pale-blue/components/bitrix/catalog.section.list/catalog_main_sections/owlcarousel/owl.carousel.min.css">
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 
 ?>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/local/templates/furniture_pale-blue/components/bitrix/catalog.section.list/catalog_main_sections/owlcarousel/owl.carousel.min.js"></script>
 <?php
 $APPLICATION->IncludeComponent(
     'bitrix:catalog.section.list', 'catalog_main_sections',
     [
-        'VIEW_MODE'           => 'TEXT',
-        'SHOW_PARENT_NAME'    => 'Y',
-        'IBLOCK_TYPE'         => 'catalog',
-        'IBLOCK_ID'           => 6,
-        'SECTION_ID'          => $_REQUEST['SECTION_ID'],
-        'SECTION_CODE'        => '',
-        'SECTION_URL'         => '',
-        'COUNT_ELEMENTS'      => 'Y',
-        'TOP_DEPTH'           => '2',
-        'SECTION_FIELDS'      => ['PREVIEW_TEXT', 'PREVIEW_IMAGE'],
-        'SECTION_USER_FIELDS' => '',
-        'ADD_SECTIONS_CHAIN'  => 'Y',
-        'CACHE_TYPE'          => 'Y',
-        'CACHE_TIME'          => '36000000',
-        'CACHE_NOTES'         => '',
-        'CACHE_GROUPS'        => 'Y',
-    ]
+        'VIEW_MODE'             => 'TEXT',
+        'SHOW_PARENT_NAME'      => 'Y',
+        'IBLOCK_TYPE'           => 'catalog',
+        'IBLOCK_ID'             => 6,
+        'SECTION_ID'            => $_REQUEST['SECTION_ID'],
+        'SECTION_CODE'          => '',
+        'SECTION_URL'           => '',
+        'COUNT_ELEMENTS'        => 'Y',
+        'TOP_DEPTH'             =>  2,
+        'SECTION_USER_FIELDS'   => [
+            0 => '',
+            1 => '',
+        ],
+        'ADD_SECTIONS_CHAIN'    => 'Y',
+        'CACHE_TYPE'            => 'Y',
+        'CACHE_TIME'            => '36000000',
+        'CACHE_NOTES'           => '',
+        'CACHE_GROUPS'          => 'Y',
+        'COUNT_ELEMENTS_FILTER' => 'CNT_ACTIVE',
+        'SECTION_FIELDS'        => [
+            0 => '',
+            1 => '',
+        ],
+        'FILTER_NAME'           => 'sectionsFilter',
+        'CACHE_FILTER'          => 'N',
+    ],
+    false
 );
 ?>
 

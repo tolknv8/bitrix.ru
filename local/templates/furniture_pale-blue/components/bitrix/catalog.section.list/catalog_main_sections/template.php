@@ -13,10 +13,19 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true); ?>
-<div>
+
+<div class="owl-carousel">
     <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
-        <div style="background-image: url("")">
-            <a href="<?= $arItem['LIST_PAGE_URL'] ?>"><?= $arItem['NAME']?></a>
+        <div>
+            <a href="<?= $arItem['LIST_PAGE_URL'] ?>">
+                <?= $arItem['NAME'] ?>
+                <?= $arItem['ELEMENT_CNT_TITLE'] ?>
+                <img src="<? echo $arItem['PICTURE']['SRC'] ?>">
+            </a>
+
         </div>
     <?php endforeach; ?>
 </div>
+<script>$(document).ready(function() {
+        $(".owl-carousel").owlCarousel();
+    });</script>

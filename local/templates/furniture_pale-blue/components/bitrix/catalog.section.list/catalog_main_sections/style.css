@@ -1,0 +1,25 @@
+.catalog_block{
+    width:150px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+}
+.catalog_block_none{
+    display: none;
+}
+.catalog_block img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+.catalog_block a{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+}
+.catalog_container{
+    display: flex;
+    flex-direction: row;
+}
