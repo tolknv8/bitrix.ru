@@ -1,4 +1,4 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
+<?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 /** @var array $arParams */
@@ -32,12 +32,10 @@ $this->setFrameMode(true);
             <?php endif ?>
             <div class="news_container">
                 <?= $arItem['PREVIEW_TEXT'] ?>
-                <br><br>
-                <?php if ($arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE']): ?>
-                    <b><?= $arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE'] ?></b>
-                <?php endif ?>
+                <?php if ($arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE']):
+                    echo $arItem['DISPLAY_PROPERTIES']['AUTHOR']['VALUE'];
+                endif; ?>
             </div>
         </div>
-
-    <? endforeach; ?>
+    <?php endforeach; ?>
 </div>

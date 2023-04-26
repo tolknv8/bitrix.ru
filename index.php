@@ -19,6 +19,5 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
     </p>
     <h3>Наша продукция</h3>
 
-<?php require('local/articlesList.php') ?>
-
-<? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/local/include/articles_list.php';
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
