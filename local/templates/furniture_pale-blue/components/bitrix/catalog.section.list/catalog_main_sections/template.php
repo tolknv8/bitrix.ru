@@ -16,35 +16,37 @@ $this->setFrameMode(true); ?>
 
 <div class="owl-carousel">
     <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
-        <div>
-            <a href="<?= $arItem['LIST_PAGE_URL'] ?>">
-                <img src="<? echo $arItem['PICTURE']['SRC'] ?>">
+        <div style="">
+            <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
+               style="background-image: url('<?php echo $arItem['PICTURE']['SRC'] ?>');"
+               class='catalog_block'>
                 <?= $arItem['NAME'] ?>
                 <?= $arItem['ELEMENT_CNT_TITLE'] ?>
             </a>
-
         </div>
     <?php endforeach; ?>
 </div>
 <script>
     $(document).ready(function() {
         $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
+            loop:       true,
+            margin:     10,
+            items:      4,
+            nav:        true,
+            responsive: {
+                0:    {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600:  {
+                    items: 3
                 },
-                1000:{
-                    items:5
+                1000: {
+                    items: 5
                 }
             },
-            navClass: ['owl-prev-local', 'owl-next-local'],
-            center: true
-        })
+            navClass:   ['owl-prev-local', 'owl-next-local'],
+            center:     true,
+            autoWidth:  true,
+        });
     });
 </script>

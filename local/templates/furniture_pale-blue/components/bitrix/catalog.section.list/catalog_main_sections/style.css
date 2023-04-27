@@ -1,23 +1,10 @@
 .catalog_block{
-    width:150px;
-    height:100px;
-    display: flex;
-    justify-content: center;
-}
-.catalog_block_none{
-    display: none;
-}
-.catalog_block img{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100px;
+    display:block;
     height: 100px;
-}
-.catalog_block a{
-    z-index: 1;
-    display: flex;
-    position: absolute;
+    background-size:100% 100%;
+    text-align: left;
+    text-decoration-line: blink;
+    text-shadow: -1px 1px 0 #FFFFFF;
 }
 .catalog_container{
     display: flex;
@@ -36,6 +23,6 @@
     background: none;
 }
 .owl-height-local{
-    height:200px;
+    height:50%;
     width:100%;
 }
