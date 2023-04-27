@@ -3,7 +3,7 @@
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 
 ?>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="/local/templates/furniture_pale-blue/components/bitrix/catalog.section.list/catalog_main_sections/owlcarousel/owl.carousel.min.js"></script>
 <?php
 $APPLICATION->IncludeComponent(

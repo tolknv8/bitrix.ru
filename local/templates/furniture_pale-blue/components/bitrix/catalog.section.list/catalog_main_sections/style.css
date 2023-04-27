@@ -23,3 +23,19 @@
     display: flex;
     flex-direction: row;
 }
+.owl-prev-local{
+    position: relative;
+    right:-45%;
+    border: none;
+    background: none;
+}
+.owl-next-local{
+    position: relative;
+    left: 45%;
+    border: none;
+    background: none;
+}
+.owl-height-local{
+    height:200px;
+    width:100%;
+}
