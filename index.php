@@ -1,10 +1,7 @@
-<link rel="stylesheet"
-      href="/local/include/owlcarousel/owl.carousel.min.css">
 <?
 require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 ?>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="/local/include/owlcarousel/owl.carousel.min.js"></script>
+
 <?php
         require $_SERVER['DOCUMENT_ROOT'] . '/local/include/catalog_main_sections.php'
 ?>

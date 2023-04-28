@@ -14,19 +14,18 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+$this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarousel/owl.carousel.min.css');
 ?>
 
 <div class="owl-carousel">
     <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
-        <div>
+        <div class="block-container" style="background-image: url('<?= $arItem['PICTURE']['SRC'] ?>');">
             <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
-               style="background-image: url('<?= $arItem['PICTURE']['SRC'] ?>');"
-               class='catalog_block'>
+               class="catalog_block">
                 <?= $arItem['NAME'] ?>
                 <?= $arItem['ELEMENT_CNT_TITLE'] ?>
             </a>
         </div>
     <?php endforeach; ?>
 </div>
-
-<script type="text/javascript" src="script_owlslider.js"></script>

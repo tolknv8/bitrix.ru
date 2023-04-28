@@ -1,10 +1,7 @@
 .catalog_block{
-    display:block;
-    height: 100px;
-    background-size:100% 100%;
-    text-align: left;
     text-decoration-line: blink;
     text-shadow: -1px 1px 0 #FFFFFF;
+    text-align: center;
 }
 .catalog_container{
     display: flex;
@@ -25,4 +22,10 @@
 .owl-height-local{
     height:50%;
     width:100%;
+}
+.block-container{
+    height: 100px;
+    background-size:100% 100%;
+    display: flex;
+    align-items: flex-end;
 }
