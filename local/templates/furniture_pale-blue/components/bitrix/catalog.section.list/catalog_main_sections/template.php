@@ -1,4 +1,5 @@
-<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+<?php
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 }
 /** @var array $arParams */
@@ -12,13 +13,14 @@
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
-$this->setFrameMode(true); ?>
+$this->setFrameMode(true);
+?>
 
 <div class="owl-carousel">
     <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
-        <div style="">
+        <div>
             <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
-               style="background-image: url('<?php echo $arItem['PICTURE']['SRC'] ?>');"
+               style="background-image: url('<?= $arItem['PICTURE']['SRC'] ?>');"
                class='catalog_block'>
                 <?= $arItem['NAME'] ?>
                 <?= $arItem['ELEMENT_CNT_TITLE'] ?>
@@ -50,3 +52,4 @@ $this->setFrameMode(true); ?>
         });
     });
 </script>
+<script type="text/javascript" src="script_owlslider.js"></script>
