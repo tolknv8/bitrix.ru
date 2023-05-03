@@ -1,17 +1,17 @@
 $('.owl-carousel').owlCarousel({
     loop:       true,
     margin:     10,
-    items:      4,
+    items:      3,
     nav:        true,
     responsive: {
         0:    {
             items: 1
         },
         600:  {
-            items: 3
+            items: 2
         },
         1000: {
-            items: 5
+            items: 3
         }
     },
     navClass:   ['owl-prev-local', 'owl-next-local'],

@@ -18,16 +18,16 @@ $this->setFrameMode(true);
 $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarousel/owl.carousel.min.css');
 ?>
 
-<div class="owl-carousel">
+<div class="owl-carousel main-carousel">
     <?php foreach ($arResult['SECTIONS'] as $arItem):
         if($arItem['ELEMENT_CNT'] > 0){
             if(!$arItem['PICTURE']){
                 $arFile = CFile::GetFileArray($arItem["DETAIL_PICTURE"]);
             }
             else $arFile = $arItem['PICTURE'];?>
-        <div class="block-container" style="background-image: url('<?= $arFile['SRC'] ?>');">
+        <div class="block-container-main" style="background-image: url('<?= $arFile['SRC'] ?>');">
             <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
-               class="catalog_block">
+               class="catalog_block-main">
                 <?= $arItem['NAME'] ?>
                 <?= $arItem['ELEMENT_CNT_TITLE'] ?>
             </a>

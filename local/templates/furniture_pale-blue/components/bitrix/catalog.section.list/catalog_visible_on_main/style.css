@@ -1,4 +1,4 @@
-.catalog_block{
+.catalog_block-main{
     text-decoration-line: blink;
     text-shadow: -1px 1px 0 #FFFFFF;
     text-align: center;
@@ -7,6 +7,12 @@
     display: flex;
     flex-direction: row;
 }
+.block-container-main{
+     height: 100px;
+     background-size:100% 100%;
+     display: flex;
+     align-items: flex-end;
+ }
 .owl-prev-local{
     position: relative;
     right:-45%;
@@ -22,10 +28,4 @@
 .owl-height-local{
     height:50%;
     width:100%;
-}
-.block-container{
-    height: 100px;
-    background-size:100% 100%;
-    display: flex;
-    align-items: flex-end;
 }
