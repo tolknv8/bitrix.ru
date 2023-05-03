@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarousel/owl.carousel.min.css');
 ?>
 
-<div class="owl-carousel main-carousel">
+<div class="owl-carousel slide-two">
     <?php foreach ($arResult['SECTIONS'] as $arItem):
         if($arItem['ELEMENT_CNT'] > 0){
             if(!$arItem['PICTURE']){

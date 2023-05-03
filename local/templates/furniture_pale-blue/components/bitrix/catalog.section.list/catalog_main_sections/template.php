@@ -18,7 +18,7 @@ $this->setFrameMode(true);
 $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarousel/owl.carousel.min.css');
 ?>
 
-<div class="owl-carousel">
+<div class="owl-carousel slide-one">
     <?php foreach ($arResult['SECTIONS'] as $arItem): ?>
         <div class="block-container" style="background-image: url('<?= $arItem['PICTURE']['SRC'] ?>');">
             <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
