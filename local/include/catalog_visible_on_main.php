@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['sectionsFilter'] = array('UF_SHOW_ON_MAIN' => true);
+$GLOBALS['sectionsFilter'] = ['UF_SHOW_ON_MAIN' => true];
 $APPLICATION->IncludeComponent(
     'bitrix:catalog.section.list',
     'catalog_visible_on_main',
@@ -19,6 +19,6 @@ $APPLICATION->IncludeComponent(
         'CACHE_GROUPS'          => 'Y',
         'COUNT_ELEMENTS_FILTER' => 'CNT_ACTIVE',
         'FILTER_NAME'           => 'sectionsFilter',
-        'CACHE_FILTER'          => 'N',
+        'CACHE_FILTER'          => 'Y',
     ]
 ); ?>
