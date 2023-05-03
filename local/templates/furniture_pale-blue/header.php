@@ -1,7 +1,8 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
-} ?>
-<?
+}
+use Bitrix\Main\Page\Asset;
+
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
@@ -13,6 +14,10 @@ IncludeTemplateLangFile(__FILE__);
     $APPLICATION->ShowCSS();
     $APPLICATION->ShowHeadStrings();
     $APPLICATION->ShowHeadScripts();
+
+    Asset::getInstance()->addJs('/local/templates/furniture_pale-blue/markup/js/jquery-3.4.1.min.js');
+    Asset::getInstance()->addJs('/local/templates/furniture_pale-blue/markup/js/owlcarousel/owl.carousel.min.js');
+
     ?>
     <link href="<?= SITE_TEMPLATE_PATH ?>/common.css" type="text/css" rel="stylesheet"/>
     <link href="<?= SITE_TEMPLATE_PATH ?>/colors.css" type="text/css" rel="stylesheet"/>
