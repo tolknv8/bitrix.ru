@@ -3,7 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php');
 ?>
 
 <?php
-        require $_SERVER['DOCUMENT_ROOT'] . '/local/include/catalog_main_sections.php'
+require $_SERVER['DOCUMENT_ROOT'] . '/local/include/catalog_main_sections.php'
 ?>
 
 
