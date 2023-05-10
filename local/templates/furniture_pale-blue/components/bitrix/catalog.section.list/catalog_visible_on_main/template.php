@@ -31,3 +31,4 @@ $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarouse
         <?php endif; ?>
     <?php endforeach; ?>
 </div>
+

@@ -3,60 +3,7 @@
 } ?>
 <?php $APPLICATION->IncludeComponent(
     'bitrix:catalog.section.list',
-    '',
-    [
-        'IBLOCK_TYPE'      => $arParams['IBLOCK_TYPE'],
-        'IBLOCK_ID'        => $arParams['IBLOCK_ID'],
-        'SECTION_ID'       => $arResult['VARIABLES']['SECTION_ID'],
-        'SECTION_CODE'     => $arResult['VARIABLES']['SECTION_CODE'],
-        'DISPLAY_PANEL'    => 'N',
-        'CACHE_TYPE'       => $arParams['CACHE_TYPE'],
-        'CACHE_TIME'       => $arParams['CACHE_TIME'],
-        'CACHE_GROUPS'     => $arParams['CACHE_GROUPS'],
-        'COUNT_ELEMENTS'   => $arParams['SECTION_COUNT_ELEMENTS'],
-        'SECTION_URL'      => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['section'],
-        'SHOW_PARENT_NAME' => $arParams['SECTION_SHOW_PARENT_NAME'],
-    ],
-    $component
-); ?>
-<?php if ($arParams['USE_FILTER'] == 'Y'): ?>
-    <?php $APPLICATION->IncludeComponent(
-        'bitrix:catalog.filter',
-        '',
-        [
-            'IBLOCK_TYPE'   => $arParams['IBLOCK_TYPE'],
-            'IBLOCK_ID'     => $arParams['IBLOCK_ID'],
-            'FILTER_NAME'   => $arParams['FILTER_NAME'],
-            'FIELD_CODE'    => $arParams['FILTER_FIELD_CODE'],
-            'PROPERTY_CODE' => $arParams['FILTER_PROPERTY_CODE'],
-            'PRICE_CODE'    => $arParams['FILTER_PRICE_CODE'],
-            'CACHE_TYPE'    => $arParams['CACHE_TYPE'],
-            'CACHE_TIME'    => $arParams['CACHE_TIME'],
-            'CACHE_GROUPS'  => $arParams['CACHE_GROUPS'],
-        ],
-        $component
-    );
-    ?>
-    <br/>
-<? endif ?>
-<? if ($arParams['USE_COMPARE'] == 'Y'): ?>
-    <? $APPLICATION->IncludeComponent(
-        'bitrix:catalog.compare.list',
-        '',
-        [
-            'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-            'IBLOCK_ID'   => $arParams['IBLOCK_ID'],
-            'NAME'        => $arParams['COMPARE_NAME'],
-            'DETAIL_URL'  => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['element'],
-            'COMPARE_URL' => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['compare'],
-        ],
-        $component
-    ); ?>
-    <br/>
-<? endif ?>
-<?php $APPLICATION->IncludeComponent(
-    'bitrix:catalog.section',
-    'furniture',
+    'catalog_visible_on_main',
     [
         'IBLOCK_TYPE'         => $arParams['IBLOCK_TYPE'],
         'IBLOCK_ID'           => $arParams['IBLOCK_ID'],

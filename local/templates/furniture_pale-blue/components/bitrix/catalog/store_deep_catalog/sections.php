@@ -1,15 +1,16 @@
 <?php if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 } ?>
+
 <?php $APPLICATION->IncludeComponent(
     'bitrix:catalog.section',
-    'furniture',
+    'board',
     [
         'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
         'IBLOCK_ID'   => $arParams['IBLOCK_ID'],
 
         'SHOW_ALL_WO_SECTION' => 'Y',
-        'SET_TITLE'           => 'N',
+        'SET_TITLE'           => 'Y',
 
         'ELEMENT_SORT_FIELD'  => $arParams['ELEMENT_SORT_FIELD'],
         'ELEMENT_SORT_ORDER'  => $arParams['ELEMENT_SORT_ORDER'],
@@ -18,7 +19,6 @@
         'META_DESCRIPTION'    => $arParams['LIST_META_DESCRIPTION'],
         'BROWSER_TITLE'       => $arParams['LIST_BROWSER_TITLE'],
         'INCLUDE_SUBSECTIONS' => $arParams['INCLUDE_SUBSECTIONS'],
-        'BASKET_URL'          => $arParams['BASKET_URL'],
         'ACTION_VARIABLE'     => $arParams['ACTION_VARIABLE'],
         'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
         'SECTION_ID_VARIABLE' => $arParams['SECTION_ID_VARIABLE'],
@@ -33,11 +33,11 @@
         'PAGE_ELEMENT_COUNT'  => $arParams['PAGE_ELEMENT_COUNT'],
         'LINE_ELEMENT_COUNT'  => $arParams['LINE_ELEMENT_COUNT'],
         'PRICE_CODE'          => $arParams['PRICE_CODE'],
-        'USE_PRICE_COUNT'     => $arParams['USE_PRICE_COUNT'],
+        'USE_PRICE_COUNT'     => 'Y',
         'SHOW_PRICE_COUNT'    => $arParams['SHOW_PRICE_COUNT'],
 
-        'PRICE_VAT_INCLUDE' => $arParams['PRICE_VAT_INCLUDE'],
-
+        'PRICE_VAT_INCLUDE'               => $arParams['PRICE_VAT_INCLUDE'],
+        'TOP_DEPTH'                       => '1',
         'DISPLAY_TOP_PAGER'               => $arParams['DISPLAY_TOP_PAGER'],
         'DISPLAY_BOTTOM_PAGER'            => $arParams['DISPLAY_BOTTOM_PAGER'],
         'PAGER_TITLE'                     => $arParams['PAGER_TITLE'],
