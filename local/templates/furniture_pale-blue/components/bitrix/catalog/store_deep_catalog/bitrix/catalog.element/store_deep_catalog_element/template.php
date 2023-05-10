@@ -14,21 +14,18 @@
             ?>
             <div class="catalog-item-image">
                 <?
-                if (is_array($arResult["DETAIL_PICTURE"])):
-                    $width = $arResult["DETAIL_PICTURE"]["WIDTH"];
-                    ?>
+                if (is_array($arResult["DETAIL_PICTURE"])):?>
                     <img src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-                         width="<?= $arResult["DETAIL_PICTURE"]["WIDTH"] ?>"
-                         height="<?= $arResult["DETAIL_PICTURE"]["HEIGHT"] ?>" alt="<?= $arResult["NAME"] ?>"
-                         title="<?= $arResult["NAME"] ?>"/>
+                         alt="<?= $arResult["NAME"] ?>"
+                         title="<?= $arResult["NAME"] ?>"
+                         class="catalog_item-img"
+                    />
                 <?
-                elseif (is_array($arResult["PREVIEW_PICTURE"])):
-                    $width = $arResult["PREVIEW_PICTURE"]["WIDTH"];
-                    ?>
+                elseif (is_array($arResult["PREVIEW_PICTURE"])):?>
                     <img src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
-                         width="<?= $arResult["PREVIEW_PICTURE"]["WIDTH"] ?>"
-                         height="<?= $arResult["PREVIEW_PICTURE"]["HEIGHT"] ?>" alt="<?= $arResult["NAME"] ?>"
-                         title="<?= $arResult["NAME"] ?>"/>
+                         alt="<?= $arResult["NAME"] ?>"
+                         title="<?= $arResult["NAME"] ?>"
+                         class="catalog_item-img"/>
                 <?
                 endif;
                 ?>
