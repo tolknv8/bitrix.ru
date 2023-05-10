@@ -22,7 +22,7 @@ $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarouse
     <?php foreach ($arResult['SECTIONS'] as $arItem):
         if ($arItem['ELEMENT_CNT'] > 0):?>
             <div class="block-container-main" style="background-image: url('<?= $arItem['PICTURE']['SRC'] ?>');">
-                <a href="<?= $arItem['LIST_PAGE_URL'] ?>"
+                <a href="<?= $arItem['SECTION_PAGE_URL'] ?>"
                    class="catalog_block-main">
                     <?= $arItem['NAME'] ?>
                     <?= $arItem['ELEMENT_CNT_TITLE'] ?>
@@ -31,4 +31,5 @@ $this->addExternalCss('/local/templates/furniture_pale-blue/markup/js/owlcarouse
         <?php endif; ?>
     <?php endforeach; ?>
 </div>
+
 

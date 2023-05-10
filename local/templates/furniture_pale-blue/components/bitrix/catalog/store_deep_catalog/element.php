@@ -3,7 +3,7 @@
 } ?>
 <?php $ElementID = $APPLICATION->IncludeComponent(
     'bitrix:catalog.element',
-    'store_deep_catalog',
+    'store_deep_catalog_element',
     [
         'IBLOCK_TYPE'          => $arParams['IBLOCK_TYPE'],
         'IBLOCK_ID'            => $arParams['IBLOCK_ID'],
