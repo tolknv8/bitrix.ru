@@ -16,7 +16,7 @@ $('.slide-one').owlCarousel({
     },
     navClass:   ['owl-prev-local', 'owl-next-local'],
     center:     true,
-    margin: 20,
+    margin:     20,
 });
 $('.slide-two').owlCarousel({
     loop:       true,
@@ -36,5 +36,5 @@ $('.slide-two').owlCarousel({
     },
     navClass:   ['owl-prev-local', 'owl-next-local'],
     center:     true,
-    margin: 20,
+    margin:     20,
 });

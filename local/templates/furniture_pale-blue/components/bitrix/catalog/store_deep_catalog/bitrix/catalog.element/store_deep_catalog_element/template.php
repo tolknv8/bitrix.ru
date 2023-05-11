@@ -1,4 +1,4 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
+<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     die();
 } ?>
 
@@ -7,24 +7,24 @@
         <?
         $width = 0;
         if ($arParams['DETAIL_SHOW_PICTURE'] != 'N'
-            && (is_array($arResult["PREVIEW_PICTURE"])
+            && (is_array($arResult['PREVIEW_PICTURE'])
                 || is_array(
-                    $arResult["DETAIL_PICTURE"]
+                    $arResult['DETAIL_PICTURE']
                 ))):
             ?>
             <div class="catalog-item-image">
                 <?
-                if (is_array($arResult["DETAIL_PICTURE"])):?>
-                    <img src="<?= $arResult["DETAIL_PICTURE"]["SRC"] ?>"
-                         alt="<?= $arResult["NAME"] ?>"
-                         title="<?= $arResult["NAME"] ?>"
+                if (is_array($arResult['DETAIL_PICTURE'])):?>
+                    <img src="<?= $arResult['DETAIL_PICTURE']['SRC'] ?>"
+                         alt="<?= $arResult['NAME'] ?>"
+                         title="<?= $arResult['NAME'] ?>"
                          class="catalog_item-img"
                     />
                 <?
-                elseif (is_array($arResult["PREVIEW_PICTURE"])):?>
-                    <img src="<?= $arResult["PREVIEW_PICTURE"]["SRC"] ?>"
-                         alt="<?= $arResult["NAME"] ?>"
-                         title="<?= $arResult["NAME"] ?>"
+                elseif (is_array($arResult['PREVIEW_PICTURE'])):?>
+                    <img src="<?= $arResult['PREVIEW_PICTURE']['SRC'] ?>"
+                         alt="<?= $arResult['NAME'] ?>"
+                         title="<?= $arResult['NAME'] ?>"
                          class="catalog_item-img"/>
                 <?
                 endif;
@@ -33,20 +33,20 @@
         <?
         endif;
         ?>
-        <div class="catalog-item-desc<?= $width < 300 ? '-float' : '' ?>">
+        <div class="catalog-item-desc">
             <?
-            if ($arResult["DETAIL_TEXT"]):
-                echo $arResult["DETAIL_TEXT"];
-            elseif ($arResult["PREVIEW_TEXT"]):
-                echo $arResult["PREVIEW_TEXT"];
+            if ($arResult['DETAIL_TEXT']):
+                echo $arResult['DETAIL_TEXT'];
+            elseif ($arResult['PREVIEW_TEXT']):
+                echo $arResult['PREVIEW_TEXT'];
             endif;
             ?>
         </div>
         <?
-        foreach ($arResult["PRICES"] as $code => $arPrice):
+        foreach ($arResult['PRICES'] as $code => $arPrice):
             ?>
-            <? if ($arPrice["PRINT_VALUE"] > 0): ?>
-            <div class="catalog-item-price"><span><?= GetMessage('CR_PRICE') ?>:</span> <?= $arPrice["PRINT_VALUE"] ?>
+            <? if ($arPrice['PRINT_VALUE'] > 0): ?>
+            <div class="catalog-item-price"><span><?= GetMessage('CR_PRICE') ?>:</span> <?= $arPrice['PRINT_VALUE'] ?>
             </div>
         <? endif; ?>
         <?
@@ -56,29 +56,29 @@
         <?
         if (is_array($arResult['DISPLAY_PROPERTIES']) && count($arResult['DISPLAY_PROPERTIES']) > 0):
             $cnt = 0;
-            foreach ($arResult["DISPLAY_PROPERTIES"] as $pid => $arProperty):
+            foreach ($arResult['DISPLAY_PROPERTIES'] as $pid => $arProperty):
                 if ($pid != 'PRICE' && $pid != 'PRICECURRENCY'):
                     if ($cnt == 0):
                         $cnt++;
                         ?>
                         <?php echo 'asdasdasd' ?>
                         <div class="catalog-item-properties">
-                        <div class="catalog-item-properties-title"><?= GetMessage("CATALOG_CHAR") ?></div>
+                        <div class="catalog-item-properties-title"><?= GetMessage('CATALOG_CHAR') ?></div>
                     <?
                     endif;
                     ?>
 
                     <div class="catalog-item-property">
-                        <span><?= $arProperty["NAME"] ?></span>
+                        <span><?= $arProperty['NAME'] ?></span>
                         <b><?
-                            if (is_array($arProperty["DISPLAY_VALUE"])):
-                                echo implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);
-                            elseif ($pid == "MANUAL"):
+                            if (is_array($arProperty['DISPLAY_VALUE'])):
+                                echo implode('&nbsp;/&nbsp;', $arProperty['DISPLAY_VALUE']);
+                            elseif ($pid == 'MANUAL'):
                                 ?>
-                                <a href="<?= $arProperty["VALUE"] ?>"><?= GetMessage("CATALOG_DOWNLOAD") ?></a>
+                                <a href="<?= $arProperty['VALUE'] ?>"><?= GetMessage('CATALOG_DOWNLOAD') ?></a>
                             <?
                             else:
-                                echo $arProperty["DISPLAY_VALUE"];
+                                echo $arProperty['DISPLAY_VALUE'];
                             endif;
                             ?></b>
                     </div>
@@ -93,13 +93,13 @@
             endif;
         endif;
 
-        if (is_array($arResult["SECTION"])):
+        if (is_array($arResult['SECTION'])):
             ?>
-            <br/><a href="<?= $arResult["SECTION"]["SECTION_PAGE_URL"] ?>">&larr; <?= GetMessage("CATALOG_BACK") ?></a>
+            <br/><a href="<?= $arResult['SECTION']['SECTION_PAGE_URL'] ?>">&larr; <?= GetMessage('CATALOG_BACK') ?></a>
         <?
         elseif (is_array($arResult['IBLOCK'])):
             ?>
-            <br/><a href="<?= $arResult["IBLOCK"]["LIST_PAGE_URL"] ?>">&larr; <?= GetMessage("CATALOG_BACK") ?></a>
+            <br/><a href="<?= $arResult['IBLOCK']['LIST_PAGE_URL'] ?>">&larr; <?= GetMessage('CATALOG_BACK') ?></a>
         <?
         endif;
         ?>
